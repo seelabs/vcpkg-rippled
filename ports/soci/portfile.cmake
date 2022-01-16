@@ -5,6 +5,7 @@ vcpkg_from_github(
     SHA512 d08d2383808d46d5e9550e9c7d93fb405d9e336eb38d974ba429e5b9446d3af53d4e702b90e80c67e298333da0145457fa1146d9773322676030be69de4ec4f4
     HEAD_REF master
     PATCHES
+        fix-bad-unsigned-exception.patch
         fix-dependency-libmysql.patch
         export-include-dirs.patch
         fix-mysql-feature-error.patch # https://bugs.mysql.com/bug.php?id=85131

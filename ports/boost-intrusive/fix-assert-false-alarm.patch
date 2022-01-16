@@ -1,0 +1,13 @@
+diff --git a/include/boost/intrusive/hashtable.hpp b/include/boost/intrusive/hashtable.hpp
+index de64bba..a758b95 100644
+--- a/include/boost/intrusive/hashtable.hpp
++++ b/include/boost/intrusive/hashtable.hpp
+@@ -1261,7 +1261,7 @@ struct bucket_hash_equal_t<ValueTraits, VoidOrKeyOfValue, VoidOrKeyHash, VoidOrK
+ 
+    void priv_insertion_update_cache(std::size_t insertion_bucket)
+    {
+-      BOOST_INTRUSIVE_INVARIANT_ASSERT(insertion_bucket < this->bucket_hash_type::priv_bucket_count());
++      // BOOST_INTRUSIVE_INVARIANT_ASSERT(insertion_bucket < this->bucket_hash_type::priv_bucket_count());
+       bucket_ptr p = this->bucket_hash_type::priv_bucket_pointer() + std::ptrdiff_t(insertion_bucket);
+       if(p < this->cached_begin_){
+          this->cached_begin_ = p;
